@@ -38,9 +38,37 @@ function startLoopReverse(){
   domItem[currentItem].classList.add("active");
   thumbnailsActive();
 }
+
 //dichiarazioni***********************************************
 // array di immagini
 const images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
+const descrizioni = [
+  {
+    url: "01.jpg",
+    titolo: "molo sul lago",
+    descrizione: "l' immagine di un molo di un lago"
+  },
+  {
+    url: "02.jpg",
+    titolo: "paese di montagna",
+    descrizione: "un piccolo paese montano"
+  },
+  {
+    url: "03.jpg",
+titolo: "londra",
+descrizione:" foto che cattura il fiume e il famoso big ben"
+  },
+  {
+    url:"04.jpg",
+titolo: "città notturna",
+descrizione: " immagine che cattura una città notturna illuminata"
+  },
+  {
+    url: "05.jpg",
+titolo: "spiaggia",
+descrizione: "spiaggia di un isola tropicale"
+  }
+];
 
 //ci prendiamo dall' html il div items
 const items = document.querySelector(".items");
@@ -64,7 +92,7 @@ const startReverse = document.getElementById("start-reverse")
 //dichiarazioni**************************************************
 
 //inizio ciclo
-for (let i = 0; i < images.length; i++) {
+for (let i = 0; i < descrizioni.length; i++) {
   //SLIDE***********************************************
 
   //creiamo il div per le slide
@@ -82,13 +110,29 @@ for (let i = 0; i < images.length; i++) {
   const img = document.createElement("img");
 
   // associamo il percorso file
-  img.src = `img/${images[i]}`;
+  img.src = `img/${descrizioni[i].url}`;
 
   //appendiamo l immagine al div contenitore
   item.append(img);
 
   //appendiamo le slide nel suo contenitore
   items.append(item);
+
+  // Creiamo un div per il titolo e la descrizione
+const text = document.createElement("div");
+text.classList.add("text");
+
+// Aggiungiamo titolo e descrizione 
+const titleElement = document.createElement("h3");
+titleElement.textContent = descrizioni[i].titolo;
+
+const descriptionElement = document.createElement("p");
+descriptionElement.textContent = descrizioni[i].descrizione;
+
+text.append(titleElement);
+text.append(descriptionElement);
+
+item.append(text);
 
   //SLIDE***************************************************
 
@@ -100,7 +144,7 @@ for (let i = 0; i < images.length; i++) {
 
   // Creiamo l'immagine della miniatura
   const thumbnailImg = document.createElement("img");
-  thumbnailImg.src = `img/${images[i]}`;
+  thumbnailImg.src = `img/${descrizioni[i].url}`;
 
   thumbnailImg.addEventListener("click", function () {
     // Cambia la slide principale quando la miniatura viene cliccata
@@ -167,6 +211,7 @@ start.addEventListener("click", function(){
 
   }
 });
+
 startReverse.addEventListener("click", function(){
   if(eventoAttivo){
    loopReverse = setInterval(startLoopReverse, 3000);

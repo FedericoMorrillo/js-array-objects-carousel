@@ -55,6 +55,7 @@
 
 .prev {
     top: 0;
+
 }
 
 .prev::after {
@@ -119,3 +120,23 @@
 .yellow{
     border-color: yellow;
 }
+.text {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text h3 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .text p {
+    margin: 5px 0 0;
+    font-size: 1em;
+  }
