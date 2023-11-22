@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(24, 22, 22);
+}
+
 .container {
     width: 900px;
     margin: 100px auto 30px auto;
@@ -124,7 +128,6 @@
     position: absolute;
     right: 10px;
     bottom: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 10px;
     display: flex;
@@ -132,11 +135,14 @@
   }
   
   .text h3 {
+    text-align: end;
     margin: 0;
     font-size: 1.5em;
   }
   
   .text p {
     margin: 5px 0 0;
-    font-size: 1em;
+    font-size: 1.125rem;
+    padding-bottom: 10px;
+
   }

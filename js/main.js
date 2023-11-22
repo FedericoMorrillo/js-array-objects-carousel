@@ -45,28 +45,28 @@ const images = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"];
 const descrizioni = [
   {
     url: "01.jpg",
-    titolo: "molo sul lago",
-    descrizione: "l' immagine di un molo di un lago"
+    titolo: "Elden Ring",
+    descrizione: "Combatti nell' interregno e divieni il nuovo lord ancestrale"
   },
   {
     url: "02.jpg",
-    titolo: "paese di montagna",
-    descrizione: "un piccolo paese montano"
+    titolo: "Final Fantasy 7 Remake",
+    descrizione: "Rivivi la storia di Cloud Strife per salvare il mondo"
   },
   {
     url: "03.jpg",
-titolo: "londra",
-descrizione:" foto che cattura il fiume e il famoso big ben"
+titolo: "Uncharted 4",
+descrizione:"Torna alla ricerca di un nuovo tesoro"
   },
   {
     url:"04.jpg",
-titolo: "città notturna",
-descrizione: " immagine che cattura una città notturna illuminata"
+titolo: "Jak 3",
+descrizione: "Acquisisci nuovi poteri e salva la città di Heaven City"
   },
   {
     url: "05.jpg",
-titolo: "spiaggia",
-descrizione: "spiaggia di un isola tropicale"
+titolo: " Baldur's Gate 3",
+descrizione: "ritorna nei Forgotten Realms e vivi emozionanti avventure"
   }
 ];
 
